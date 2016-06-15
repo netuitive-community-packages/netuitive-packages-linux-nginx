@@ -1,0 +1,45 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "METRIC_META",
+    "id" : null,
+    "packageId" : null,
+    "name" : "NGINX",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "SERVER",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "nginx\\.act.*",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : "nginx\\.(conn_|req_).*",
+      "properties" : {
+        "STATISTIC" : "sum",
+        "tags" : {
+          "unit" : "count"
+        },
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "netuitive.nginx.requests_per_connection",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : "netuitive.nginx.requests_per_second",
+      "properties" : {
+        "tags" : {
+          "unit" : "ops"
+        }
+      }
+    } ]
+  }
+}

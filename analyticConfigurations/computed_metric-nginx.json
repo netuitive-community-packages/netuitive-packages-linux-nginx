@@ -1,0 +1,29 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "COMPUTED_METRIC",
+    "id" : null,
+    "packageId" : null,
+    "name" : "NGINX",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "SERVER",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "netuitive.nginx.requests_per_connection",
+      "properties" : {
+        "expression" : "data['nginx.conn_handled'].actual == 0 ? 0 : data['nginx.req_handled'].actual / data['nginx.conn_handled'].actual",
+        "fqn" : "netuitive.nginx.requests_per_connection",
+        "name" : "Requests per Connection"
+      }
+    }, {
+      "match" : "netuitive.nginx.requests_per_second",
+      "properties" : {
+        "expression" : "data['nginx.req_handled'].actual / 300",
+        "fqn" : "netuitive.nginx.requests_per_second",
+        "name" : "Requests per Second"
+      }
+    } ]
+  }
+}
