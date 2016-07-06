@@ -27,14 +27,14 @@
         "type" : "COUNTER"
       }
     }, {
-      "match" : "netuitive.nginx.requests_per_connection",
+      "match" : "netuitive.linux.nginx.requests_per_connection",
       "properties" : {
         "tags" : {
           "unit" : "count"
         }
       }
     }, {
-      "match" : "netuitive.nginx.requests_per_second",
+      "match" : "netuitive.linux.nginx.requests_per_second",
       "properties" : {
         "tags" : {
           "unit" : "ops"
