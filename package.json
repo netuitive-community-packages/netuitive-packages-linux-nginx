@@ -1,6 +1,6 @@
 {
   "id" : "netuitive.packages.linux.nginx",
-  "version" : "1.0.1",
+  "version" : "1.0.2",
   "manifest" : {
     "name" : "Netuitive Packages Linux NGINX",
     "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of the elements collected from the NGINX collector in the Netuitive Agent.",
@@ -12,7 +12,7 @@
       "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
       "download" : "https://github.com/netuitive-community-packages/netuitive-packages-linux-nginx/archive/master.zip"
     },
-    "compatibility" : [ "DIAMOND", "INFRASTRUCTURE" ],
+    "compatibility" : [ "INFRASTRUCTURE:Nginx" ],
     "tags" : [ ],
     "checksum" : null
   },
