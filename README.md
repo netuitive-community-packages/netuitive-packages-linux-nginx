@@ -1,6 +1,6 @@
 #netuitive.packages.linux.nginx 1.0.2
 
-For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/integrations/nginx.htm).
+For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/nginx.htm).
 
 ##Release History
 
