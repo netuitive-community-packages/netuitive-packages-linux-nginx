@@ -1,8 +1,12 @@
-#netuitive.packages.linux.nginx 1.0.2
+#netuitive.packages.linux.nginx 1.1.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/nginx.htm).
 
 ##Release History
+
+###Version 1.0.2
+
+* Updated gridstack for default dashboards
 
 ###Version 1.0.2
 
