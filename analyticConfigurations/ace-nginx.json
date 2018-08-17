@@ -1,22 +1,19 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "ACE",
-    "id" : null,
-    "packageId" : null,
-    "name" : "NGINX",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "SERVER",
-      "elementTags" : null,
-      "metricMatches" : "^nginx\\..*"
-    },
-    "metrics" : [ {
-      "match" : "^nginx\\..*",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "^nginx\\..*",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
       }
-    } ]
+    ],
+    "name": "NGINX",
+    "scope": {
+      "elementType": "SERVER",
+      "metricMatches": "^nginx\\..*"
+    },
+    "type": "ACE"
   }
 }
