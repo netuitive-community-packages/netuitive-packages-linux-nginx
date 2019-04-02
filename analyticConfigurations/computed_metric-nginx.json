@@ -4,7 +4,10 @@
       {
         "match": "netuitive.linux.nginx.requests_per_connection",
         "properties": {
-          "expression": "data['nginx.conn_handled'].actual == 0 ? 0 : data['nginx.req_handled'].actual / data['nginx.conn_handled'].actual",
+          "expressions": [
+            "${nginx.req_handled}.actual / ${nginx.conn_handled}.actual",
+            "0"
+          ],
           "fqn": "netuitive.linux.nginx.requests_per_connection",
           "name": "Requests per Connection"
         }
@@ -12,7 +15,9 @@
       {
         "match": "netuitive.linux.nginx.requests_per_second",
         "properties": {
-          "expression": "data['nginx.req_handled'].actual / 300",
+          "expressions": [
+            "${nginx.req_handled}.actual / 300"
+          ],
           "fqn": "netuitive.linux.nginx.requests_per_second",
           "name": "Requests per Second"
         }
