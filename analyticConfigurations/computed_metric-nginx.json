@@ -1,30 +1,33 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "COMPUTED_METRIC",
-    "id" : null,
-    "packageId" : null,
-    "name" : "NGINX",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "SERVER",
-      "elementTags" : null,
-      "metricMatches" : "^nginx\\..*"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.linux.nginx.requests_per_connection",
+        "properties": {
+          "expressions": [
+            "${nginx.req_handled}.actual / ${nginx.conn_handled}.actual",
+            "0"
+          ],
+          "fqn": "netuitive.linux.nginx.requests_per_connection",
+          "name": "Requests per Connection"
+        }
+      },
+      {
+        "match": "netuitive.linux.nginx.requests_per_second",
+        "properties": {
+          "expressions": [
+            "${nginx.req_handled}.actual / 300"
+          ],
+          "fqn": "netuitive.linux.nginx.requests_per_second",
+          "name": "Requests per Second"
+        }
+      }
+    ],
+    "name": "NGINX",
+    "scope": {
+      "elementType": "SERVER",
+      "metricMatches": "^nginx\\..*"
     },
-    "metrics" : [ {
-      "match" : "netuitive.linux.nginx.requests_per_connection",
-      "properties" : {
-        "expression" : "data['nginx.conn_handled'].actual == 0 ? 0 : data['nginx.req_handled'].actual / data['nginx.conn_handled'].actual",
-        "fqn" : "netuitive.linux.nginx.requests_per_connection",
-        "name" : "Requests per Connection"
-      }
-    }, {
-      "match" : "netuitive.linux.nginx.requests_per_second",
-      "properties" : {
-        "expression" : "data['nginx.req_handled'].actual / 300",
-        "fqn" : "netuitive.linux.nginx.requests_per_second",
-        "name" : "Requests per Second"
-      }
-    } ]
+    "type": "COMPUTED_METRIC"
   }
 }
